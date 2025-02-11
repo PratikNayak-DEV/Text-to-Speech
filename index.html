@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text to Speech Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <!-- Header -->
+      <div class="header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 7V4h16v3"></path>
+          <path d="M9 20h6"></path>
+          <path d="M12 4v16"></path>
+        </svg>
+        <h1>Text to Speech Converter</h1>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content">
+        <!-- Text Input -->
+        <div class="input-group">
+          <label for="text-input">Enter your text:</label>
+          <textarea id="text-input" placeholder="Type or paste your text here..."></textarea>
+        </div>
+
+        <!-- Voice Selection -->
+        <div class="voice-selector">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12h6"></path>
+            <path d="M14 12h8"></path>
+            <path d="M8 18v-6a2 2 0 0 1 4 0v6"></path>
+            <path d="M8 6v6a2 2 0 0 0 4 0V6"></path>
+          </svg>
+          <select id="voice-select">
+            <option value="">Select a voice</option>
+          </select>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+          <div class="control">
+            <label for="rate">Rate:</label>
+            <input type="range" id="rate" min="0.1" max="2" step="0.1" value="1">
+            <span id="rate-value">1.0</span>
+          </div>
+
+          <div class="control">
+            <label for="pitch">Pitch:</label>
+            <input type="range" id="pitch" min="0.1" max="2" step="0.1" value="1">
+            <span id="pitch-value">1.0</span>
+          </div>
+
+          <div class="control">
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+            <span id="volume-value">100%</span>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="actions">
+          <button id="stop-btn" class="btn btn-red" disabled>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="16" height="16" x="4" y="4"></rect>
+            </svg>
+            Stop
+          </button>
+          <button id="speak-btn" class="btn btn-blue" disabled>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            Speak
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
